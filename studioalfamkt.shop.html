@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio Alfa - Agência Estratégica</title>
+  <style>
+    :root {
+      --vermelho-neon: #ff0022;
+      --vermelho-escuro: #e60026;
+      --fundo-claro: #f7f7f7;
+      --preto: #0f0f0f;
+      --cinza: #333;
+    }
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family:"Segoe UI",sans-serif;background:#fff;color:var(--cinza);}
+    header {background:#fff;border-bottom:3px solid var(--vermelho-neon);display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;position:sticky;top:0;z-index:1000;}
+    .logo {font-size:1.8rem;font-weight:bold;color:var(--vermelho-neon);text-shadow:0 0 5px var(--vermelho-neon);}
+    nav {display:flex;gap:1rem;align-items:center;}
+    nav a {text-decoration:none;color:var(--cinza);font-weight:500;}
+    .btn {background:var(--vermelho-neon);color:#fff;padding:0.6rem 1.3rem;border-radius:30px;font-weight:bold;box-shadow:0 0 10px var(--vermelho-neon);transition:0.3s;}
+    .btn:hover {background:var(--vermelho-escuro);box-shadow:0 0 15px var(--vermelho-neon);}
+    .btn-alt {background:transparent;border:2px solid var(--vermelho-neon);color:var(--vermelho-neon);}
+    .hero {background:var(--preto);color:white;text-align:center;padding:5rem 2rem;}
+    .hero h1 {font-size:2.8rem;text-shadow:0 0 10px var(--vermelho-neon);}
+    .hero p {font-size:1.2rem;margin-top:1rem;max-width:600px;margin-inline:auto;}
+    .cta {margin-top:2rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+    .stats {display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;padding:3rem 1rem;background:var(--fundo-claro);}
+    .stat {text-align:center;} .stat strong {font-size:2rem;}
+    .services {padding:4rem 2rem;max-width:1200px;margin:auto;}
+    .services h2 {text-align:center;margin-bottom:2rem;font-size:1.8rem;color:var(--vermelho-neon);text-shadow:0 0 5px var(--vermelho-neon);}
+    .cards {display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;}
+    .card {background:#1a1a1a;color:#eee;padding:2rem;width:300px;border-left:4px solid var(--vermelho-neon);border-radius:10px;box-shadow:0 0 10px rgba(255,0,34,0.2);}
+    .form {background:#ffe6ea;padding:3rem 2rem;text-align:center;}
+    .form form {max-width:500px;margin:auto;}
+    .form input,.form select,.form button {width:100%;padding:1rem;margin:0.5rem 0;border-radius:6px;border:1px solid #ccc;}
+    .form button {background:var(--vermelho-neon);color:#fff;font-weight:bold;border:none;cursor:pointer;box-shadow:0 0 10px var(--vermelho-neon);}
+    footer {background:#111;color:#aaa;text-align:center;padding:2rem 1rem;font-size:0.9rem;}
+    @media (max-width:768px) {
+      header {flex-direction:column;align-items:flex-start;gap:1rem;}
+      .hero h1 {font-size:2rem;}
+      .card {width:100%;max-width:350px;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Studio Alfa</div>
+    <nav>
+      <a href="#servicos">Soluções</a>
+      <a href="#contato">Contato</a>
+      <a href="https://wa.me/5561992380077" class="btn">Fale com um Estrategista</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Marketing é Venda</h1>
+    <p>Desde 2020 ajudando empresas a crescer com estratégia, tecnologia e muita ousadia criativa.</p>
+    <div class="cta">
+      <a href="#contato" class="btn">Quero um Atendimento</a>
+      <a href="#servicos" class="btn btn-alt">Ver Soluções</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><strong style="color:#ff0022;">+5 ANOS</strong><br>de mercado</div>
+    <div class="stat"><strong style="color:#ff0022;">VÁRIOS</strong><br>projetos realizados</div>
+    <div class="stat"><strong>+240%</strong><br>de ROI médio</div>
+  </section>
+
+  <section class="services" id="servicos">
+    <h2>Soluções Estratégicas</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Consultoria Criativa</h3>
+        <p>Diagnóstico e planejamento estratégico com foco em posicionamento e performance real.</p>
+      </div>
+      <div class="card">
+        <h3>Tráfego e Campanhas</h3>
+        <p>Gestão de mídia paga com funis inteligentes, criativos de impacto e geração de leads qualificados.</p>
+      </div>
+      <div class="card">
+        <h3>Web + Suporte</h3>
+        <p>Sites modernos com domínio, hospedagem e manutenção em modelo de assinatura descomplicado.</p>
+      </div>
+      <div class="card">
+        <h3>CRM com IA</h3>
+        <p>Automação de atendimento com agentes inteligentes, integração WhatsApp e painel completo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form" id="contato">
+    <h2>Vamos Começar?</h2>
+    <p>Preencha o formulário abaixo para ser atendido via WhatsApp e termos seu cadastro interno.</p>
+    <form id="formStudioAlfa">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="E-mail corporativo" required />
+      <input type="tel" name="telefone" placeholder="Telefone/WhatsApp" required />
+      <input type="text" name="empresa" placeholder="Nome da empresa" />
+      <select name="segmento" required>
+        <option value="">Segmento da empresa</option>
+        <option>Indústria</option>
+        <option>Imobiliária</option>
+        <option>Veículos</option>
+        <option>Outros</option>
+      </select>
+      <button type="submit">Enviar</button>
+      <p id="resposta" style="margin-top: 10px; font-weight: bold;"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Studio Alfa · Agência Estratégica 360° · Luziânia-GO | Brasília-DF</p>
+    <p>Instagram: <a href="https://instagram.com/studioalfamkt" style="color: var(--vermelho-neon);">@studioalfamkt</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("formStudioAlfa").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const resposta = document.getElementById("resposta");
+
+      const nome = form.nome.value;
+      const email = form.email.value;
+      const telefone = form.telefone.value;
+      const empresa = form.empresa.value;
+      const segmento = form.segmento.value;
+
+      const dados = { nome, email, telefone, empresa, segmento };
+
+      try {
+        await fetch("https://x8ki-letl-twmt.n7.xano.io/api:j8rttIvt/formulation_1", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dados)
+        });
+
+        resposta.innerText = "Enviado com sucesso!";
+        resposta.style.color = "green";
+
+        const msg = `Olá! Me chamo ${nome}.
+Meu e-mail é ${email}.
+Meu telefone é ${telefone}.
+Sou da empresa ${empresa}, do segmento ${segmento}.`;
+
+        window.open(`https://wa.me/5561992380077?text=${encodeURIComponent(msg)}`, "_blank");
+        form.reset();
+      } catch (error) {
+        resposta.innerText = "Erro ao enviar. Tente novamente.";
+        resposta.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
